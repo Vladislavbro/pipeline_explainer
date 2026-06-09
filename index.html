@@ -251,7 +251,7 @@
         <div class="pp-name">Топ Ани</div>
         <div class="pp-list">
           <div class="pp-item"><span class="song">По барам</span><span class="pp-score" style="color:#3b6ef0">9.0</span></div>
-          <div class="pp-item"><span class="song">Розовое вино</span><span class="pp-score" style="color:#3b6ef0">6.0</span></div>
+          <div class="pp-item"><span class="song">Розовое вино</span><span class="pp-score" style="color:#3b6ef0">7.0</span></div>
           <div class="pp-more">… и ещё 198 треков</div>
         </div>
       </div>
@@ -259,7 +259,7 @@
         <div class="pp-name">Топ Бори</div>
         <div class="pp-list">
           <div class="pp-item"><span class="song">Ламбада</span><span class="pp-score" style="color:#2f9e7d">8.0</span></div>
-          <div class="pp-item"><span class="song">Дико, например</span><span class="pp-score" style="color:#2f9e7d">7.0</span></div>
+          <div class="pp-item"><span class="song">Дико, например</span><span class="pp-score" style="color:#2f9e7d">8.0</span></div>
           <div class="pp-more">… и ещё 198 треков</div>
         </div>
       </div>
@@ -279,13 +279,13 @@
     <div class="pp-cap">Шаг 3 · один плейлист на двоих</div>
     <div class="pp-final">
       <div class="pp-list">
-        <div class="pp-item"><span class="song">1. По барам</span><span class="pp-calc"><span class="t-a">9.0×0.9</span> + <span class="t-b">2.0×0.4</span> = <b>8.9</b></span><span class="pp-for">голос Ани весомее</span></div>
-        <div class="pp-item"><span class="song">2. Розовое вино</span><span class="pp-calc"><span class="t-a">6.0×0.8</span> + <span class="t-b">5.0×0.8</span> = <b>8.8</b></span><span class="pp-for both">близок обоим</span></div>
-        <div class="pp-item"><span class="song">3. Дико, например</span><span class="pp-calc"><span class="t-a">3.0×0.4</span> + <span class="t-b">7.0×0.9</span> = <b>7.5</b></span><span class="pp-for">голос Бори весомее</span></div>
+        <div class="pp-item"><span class="song">1. По барам</span><span class="pp-calc"><span class="t-a">9.0×0.8</span> + <span class="t-b">2.0×0.2</span> = <b>7.6</b></span><span class="pp-for">голос Ани весомее</span></div>
+        <div class="pp-item"><span class="song">2. Розовое вино</span><span class="pp-calc"><span class="t-a">7.0×0.5</span> + <span class="t-b">7.0×0.5</span> = <b>7.0</b></span><span class="pp-for both">близок обоим</span></div>
+        <div class="pp-item"><span class="song">3. Дико, например</span><span class="pp-calc"><span class="t-a">2.0×0.2</span> + <span class="t-b">8.0×0.8</span> = <b>6.8</b></span><span class="pp-for">голос Бори весомее</span></div>
       </div>
     </div>
 
-    <p class="pp-text">Для каждого трека: <b>оценка × вес</b> у Ани плюс <b>оценка × вес</b> у Бори = одно число, общая оценка трека. Вес = близость трека к человеку по звуку. Сортируем по этому числу — получаем список на двоих.</p>
+    <p class="pp-text">Для каждого трека: <b>оценка × вес</b> у Ани плюс <b>оценка × вес</b> у Бори = одно число, общая оценка трека. Веса одного трека в сумме = 1 (это softmax), то есть это взвешенное среднее. Сортируем по этому числу — получаем список на двоих.</p>
   </div>
 
   <p class="tldr-foot">Главное: трек, который близок только одному из двоих, не теряется при простом усреднении — каждому достаётся своё. Ниже тот же путь разобран подробно: как трансформер взвешивает прослушивания и как агрегатор считает веса по звуку.</p>
